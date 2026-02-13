@@ -1,0 +1,108 @@
+<footer class="footer">
+  <div class="container">
+    <!-- Left -->
+    <div class="left">
+      <img src="../../src/assets/Logo.svg" alt="Young Creatives Denmark" class="logo" />
+      <p class="description">Vi forbinder unge kreative med den etablerede branche gennem events, dialog og fællesskab.</p>
+    </div>
+
+    <!-- Socials -->
+    <div class="column">
+      <h4>Socials</h4>
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="column">
+      <h4>Telefon</h4>
+      <p>60 91 43 26</p>
+
+      <h4 class="spacing">Adresse</h4>
+      <p>
+        Jacob Cameron Brook,<br />
+        Landskronagade 27, st.,<br />
+        2100 København Ø
+      </p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: #000;
+    color: #fff;
+    padding: 80px 40px;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 80px;
+  }
+
+  .logo {
+    max-width: 300px;
+    margin-bottom: 30px;
+  }
+
+  .description {
+    max-width: 420px;
+    line-height: 1.6;
+    color: #cfcfcf;
+  }
+
+  .column h4 {
+    color: #ff93c8;
+    margin-bottom: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  .column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .column li {
+    margin-bottom: 8px;
+  }
+
+  .column a {
+    color: #fff;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .column a:hover {
+    opacity: 0.7;
+  }
+
+  .column p {
+    margin: 0;
+    line-height: 1.6;
+    color: #cfcfcf;
+  }
+
+  .spacing {
+    margin-top: 30px;
+  }
+
+  @media (max-width: 900px) {
+    .container {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .footer {
+      padding: 60px 20px;
+    }
+  }
+</style>
