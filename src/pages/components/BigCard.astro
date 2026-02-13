@@ -1,0 +1,36 @@
+---
+import { Image } from "";
+import Button from "";
+const { placeholder, buttonText, order } = Astro.props;
+---
+
+<section class="feature">
+  <Image src={placeholder} alt="Beskrivende tekst" class="placeholder" />
+  <div class="content">
+    <h2>Hvem er vi - og hvorfor findes vi?</h2>
+    <p>Young Creatives Denmark er skabt for at gøre overgangen fra studie til branche mindre uoverskuelig. Vi forbinder nye talenter med etablerede kreative gennem fysiske events.</p>
+    <Button buttonText={buttonText} />
+  </div>
+</section>
+
+<style define:vars={{ order }}>
+  .placeholder {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .content {
+    order: var(--order);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .feature {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-column: 2 / span 1;
+    gap: 5rem;
+  }
+</style>
