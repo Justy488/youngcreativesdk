@@ -1,6 +1,10 @@
 ---
 import "../styles/general.css";
 import Footer from "../pages/components/Footer.astro";
+import Hero from "./components/Hero.astro";
+import Heading from "./components/Heading.astro";
+import BigCard from "./components/BigCard.astro";
+import ycdk from "../assets/ycdk.png";
 ---
 
 <html lang="en">
@@ -13,7 +17,13 @@ import Footer from "../pages/components/Footer.astro";
     <title>Astro</title>
   </head>
   <body>
+    <Hero />
     <h1>Astro</h1>
+    <!-- <Layout>
+      <Heading />
+      <BigCard placeholder={ycdk} buttonText="LOREM IPSUM" order="1" />
+      <BigCard placeholder={ycdk} buttonText="LOREM IPSUM" order="-1" />
+    </Layout> -->
     <Footer />
   </body>
 </html>
