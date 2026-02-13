@@ -1,9 +1,12 @@
 ---
 import Button from "./Button.astro";
+import { Image } from "astro:assets";
+import Herobillede from "../../assets/YCDK_Primary_logo_Wht.svg";
 ---
 
 <section class="hero">
   <nav>
+    <Image src={Herobillede} alt="Logo" />
     <span>YP</span>
     <Button buttonText="Header Button" />
   </nav>
