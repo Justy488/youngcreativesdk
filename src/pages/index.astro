@@ -1,7 +1,16 @@
 ---
 import "../styles/general.css";
+import cardone from "../assets/ycdk.png";
+import BigCard from "../pages/components/BigCard.astro";
+import Heading from "../pages/components/Header.astro";
+import Layout from "../pages/layout.astro";
 ---
 
+<Layout>
+  <Heading />
+  <BigCard placeholder={cardone} buttonText="LOREM IPSUM" order="1" />
+  <BigCard placeholder={cardone} buttonText="LOREM IPSUM" order="-1" />
+</Layout>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -11,7 +20,5 @@ import "../styles/general.css";
     <meta name="generator" content={Astro.generator} />
     <title>Astro</title>
   </head>
-  <body>
-    <h1>Astro</h1>
-  </body>
+  <body> </body>
 </html>
