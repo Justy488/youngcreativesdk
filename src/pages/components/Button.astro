@@ -1,23 +1,42 @@
-<button class="btn">
-  <slot />
-</button>
+---
+const { buttonText, type } = Astro.props;
+---
+
+<a href="#" class={type}>{buttonText} </a>
 
 <style>
-  .btn {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600;
-    font-size: 0.875rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    padding: 0.75rem 2rem;
-    background: linear-gradient(90deg, #e88bb0 0%, #8bb5e8 100%);
-    color: white;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    display: grid;
-    grid-row: end;
+  a {
+    display: inline-flex;
     align-items: center;
     justify-content: center;
+
+    padding: 15px 40px;
+    border-radius: 999px;
+
+    font-size: clamp(0.5rem, 3vw, 1rem);
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+
+    color: white;
+    text-decoration: none;
+
+    background: linear-gradient(90deg, #ff93c8 0%, #6fa8dc 100%);
+
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  }
+
+  .secondary {
+    background: linear-gradient(90deg, #ff93c8 0%, #ff5ba6 0%);
+    background-color: #ff5ba6;
+    color: #000000;
   }
 </style>
