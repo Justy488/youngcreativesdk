@@ -1,5 +1,13 @@
 ---
 import "../styles/general.css";
+import cardone from "../assets/ycdk.png";
+import BigCard from "../pages/components/BigCard.astro";
+import Heading from "../pages/components/Header.astro";
+import Layout from "../pages/layout.astro";
+import Footer from "../pages/components/Footer.astro";
+import Door from "./components/Door.astro";
+import Button from "./components/Button.astro";
+import bigCard from "../assets/bigcard-a.png";
 ---
 
 <html lang="en">
@@ -11,5 +19,34 @@ import "../styles/general.css";
     <meta name="generator" content={Astro.generator} />
     <title>Astro</title>
   </head>
-  <body> </body>
+  <body>
+    <section>
+      <Door />
+    </section>
+    <section><Heading /></section>
+    <section>
+      <BigCard
+        placeholder={cardone}
+        buttonText="Læs mere om os"
+        order="1"
+        title="Hvem er vi – og hvorfor findes vi?"
+        text="Young Creatives Denmark er skabt for at gøre overgangen fra studie til branche mindre uoverskuelig. Vi forbinder nye talenter med etablerede kreative gennem fysiske events."
+      />
+      <BigCard
+        placeholder={bigCard}
+        buttonText="Læs mere her"
+        order="-1"
+        title="Sådan fungerer vores face-to-face event"
+        text="Vores events afholdes hos bureauer og kreative virksomheder. Aftenen starter med en kort intro, hvorefter du præsenterer dit arbejde i mindre grupper og får ærlig feedback fra branchefolk."
+      />
+    </section>
+    <!-- <Hero /> -->
+    <!-- <Layout>
+      <Heading />
+      <BigCard placeholder={ycdk} buttonText="LOREM IPSUM" order="1" />
+      <BigCard placeholder={ycdk} buttonText="LOREM IPSUM" order="-1" />
+    </Layout> -->
+
+    <Footer />
+  </body>
 </html>
