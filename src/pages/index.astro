@@ -1,10 +1,17 @@
 ---
 import "../styles/general.css";
+import cardone from "../assets/ycdk.png";
+import BigCard from "../pages/components/BigCard.astro";
+import Heading from "../pages/components/Header.astro";
+import Layout from "../pages/layout.astro";
 import Footer from "../pages/components/Footer.astro";
-import Hero from "./components/Hero.astro";
-import Heading from "./components/Heading.astro";
-import BigCard from "./components/BigCard.astro";
-import ycdk from "../assets/ycdk.png";
+import Door from "./components/Door.astro";
+import Button from "./components/Button.astro";
+import bigCard from "../assets/bigcard-a.png";
+import LittleCard from "./components/LittleCard.astro";
+import aacard from "../assets/a-a-card.png";
+import cannescard from "../assets/cannes-card.png";
+import networking from "../assets/networking.png";
 ---
 
 <html lang="en">
@@ -17,13 +24,41 @@ import ycdk from "../assets/ycdk.png";
     <title>Astro</title>
   </head>
   <body>
-    <Hero />
-    <h1>Astro</h1>
+    <section class="cards">
+      <LittleCard placeholder3={cannescard} title="Ærlig feedback" text="Tag dit portfolio med og få konkret feedback fra kreative, der sidder på bureauer og i kommunikationsafdelinger. Vi prioriterer dialog frem for monolog." />
+
+      <LittleCard placeholder3={aacard} title="Reel networking" text="Mød Art Directors, kreative strateger, designere og bureaufolk i øjenhøjde. Ingen CV-stak. Ingen akavet smalltalk. Bare ægte samtaler." />
+
+      <LittleCard placeholder3={networking} title="Stemning og fællesskab" text="Vores events kombinerer faglighed med uformel stemning, networking, pizza og kolde øl. Det skal være rart at være ny i branchen." />
+    </section>
+
+    <section>
+      <Door />
+    </section>
+    <section><Heading /></section>
+    <section>
+      <BigCard
+        placeholder={cardone}
+        buttonText="Læs mere om os"
+        order="1"
+        title="Hvem er vi – og hvorfor findes vi?"
+        text="Young Creatives Denmark er skabt for at gøre overgangen fra studie til branche mindre uoverskuelig. Vi forbinder nye talenter med etablerede kreative gennem fysiske events."
+      />
+      <BigCard
+        placeholder={bigCard}
+        buttonText="Læs mere her"
+        order="-1"
+        title="Sådan fungerer vores face-to-face event"
+        text="Vores events afholdes hos bureauer og kreative virksomheder. Aftenen starter med en kort intro, hvorefter du præsenterer dit arbejde i mindre grupper og får ærlig feedback fra branchefolk."
+      />
+    </section>
+    <!-- <Hero /> -->
     <!-- <Layout>
       <Heading />
       <BigCard placeholder={ycdk} buttonText="LOREM IPSUM" order="1" />
       <BigCard placeholder={ycdk} buttonText="LOREM IPSUM" order="-1" />
     </Layout> -->
+
     <Footer />
   </body>
 </html>

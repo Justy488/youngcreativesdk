@@ -1,14 +1,14 @@
-<!-- ---
-// import { Image } from "#";
-// import Button from "#";
-const { placeholder, buttonText, order } = Astro.props;
+---
+import { Image } from "astro:assets";
+import Button from "./Button.astro";
+const { placeholder, buttonText, order, type, title, text } = Astro.props;
 ---
 
-<section class="feature">
+<section class={type}>
   <Image src={placeholder} alt="Beskrivende tekst" class="placeholder" />
   <div class="content">
-    <h2>Hvem er vi - og hvorfor findes vi?</h2>
-    <p>Young Creatives Denmark er skabt for at gøre overgangen fra studie til branche mindre uoverskuelig. Vi forbinder nye talenter med etablerede kreative gennem fysiske events.</p>
+    <h2>{title}</h2>
+    <p>{text}</p>
     <Button buttonText={buttonText} />
   </div>
 </section>
@@ -18,19 +18,40 @@ const { placeholder, buttonText, order } = Astro.props;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 15px;
   }
   .content {
-    order: var(--order);
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
   }
-  .feature {
+  section {
+    padding-top: 2rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-column: 2 / span 1;
     gap: 5rem;
+    margin: 0 4em 4em 4em;
   }
-</style> -->
+  h2 {
+    font-size: clamp(28px, 3.5vw, 42px);
+  }
+  p {
+    font-size: clamp(16px, 1.2vw, 20px);
+    line-height: 30px;
+    font-weight: 300;
+    margin: 1em 0;
+  }
+  @media (width>=710px) {
+    .content {
+      order: var(--order);
+    }
+  }
+  @media (width<=710px) {
+    section {
+      margin: 0 2em 4em 2em;
+    }
+  }
+</style>
