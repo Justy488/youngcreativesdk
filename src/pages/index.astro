@@ -4,6 +4,9 @@ import cardone from "../assets/ycdk.png";
 import BigCard from "../pages/components/BigCard.astro";
 import Heading from "../pages/components/Header.astro";
 import Layout from "../pages/layout.astro";
+import Footer from "../pages/components/Footer.astro";
+import Door from "./components/Door.astro";
+import Button from "./components/Button.astro";
 ---
 
 <Layout>
@@ -21,4 +24,15 @@ import Layout from "../pages/layout.astro";
     <title>Astro</title>
   </head>
   <body> </body>
+  <body>
+    <!-- <Hero /> -->
+    <Button buttonText="Kontakt os" />
+    <Door />
+    <!-- <Layout>
+      <Heading />
+      <BigCard placeholder={ycdk} buttonText="LOREM IPSUM" order="1" />
+      <BigCard placeholder={ycdk} buttonText="LOREM IPSUM" order="-1" />
+    </Layout> -->
+    <Footer />
+  </body>
 </html>
