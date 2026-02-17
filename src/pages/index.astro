@@ -1,5 +1,6 @@
 ---
 import "../styles/general.css";
+import Hero from "./components/Hero.astro";
 import cardone from "../assets/ycdk.png";
 import BigCard from "../pages/components/BigCard.astro";
 import Heading from "../pages/components/Header.astro";
@@ -28,12 +29,25 @@ import Overskrift from "../pages/components/Overskrift.astro";
     <section>
       <Overskrift />
     </section>
+    <Hero />
     <section class="cards">
-      <LittleCard placeholder3={cannescard} title="Ærlig feedback" text="Tag dit portfolio med og få konkret feedback fra kreative, der sidder på bureauer og i kommunikationsafdelinger. Vi prioriterer dialog frem for monolog." />
+      <LittleCard
+        placeholder3={cannescard}
+        title="Ærlig feedback"
+        text="Tag dit portfolio med og få konkret feedback fra kreative, der sidder på bureauer og i kommunikationsafdelinger. Vi prioriterer dialog frem for monolog."
+      />
 
-      <LittleCard placeholder3={aacard} title="Reel networking" text="Mød Art Directors, kreative strateger, designere og bureaufolk i øjenhøjde. Ingen CV-stak. Ingen akavet smalltalk. Bare ægte samtaler." />
+      <LittleCard
+        placeholder3={aacard}
+        title="Reel networking"
+        text="Mød Art Directors, kreative strateger, designere og bureaufolk i øjenhøjde. Ingen CV-stak. Ingen akavet smalltalk. Bare ægte samtaler."
+      />
 
-      <LittleCard placeholder3={networking} title="Stemning og fællesskab" text="Vores events kombinerer faglighed med uformel stemning, networking, pizza og kolde øl. Det skal være rart at være ny i branchen." />
+      <LittleCard
+        placeholder3={networking}
+        title="Stemning og fællesskab"
+        text="Vores events kombinerer faglighed med uformel stemning, networking, pizza og kolde øl. Det skal være rart at være ny i branchen."
+      />
     </section>
 
     <section>
@@ -56,7 +70,7 @@ import Overskrift from "../pages/components/Overskrift.astro";
         text="Vores events afholdes hos bureauer og kreative virksomheder. Aftenen starter med en kort intro, hvorefter du præsenterer dit arbejde i mindre grupper og får ærlig feedback fra branchefolk."
       />
     </section>
-    <!-- <Hero /> -->
+
     <!-- <Layout>
       <Heading />
       <BigCard placeholder={ycdk} buttonText="LOREM IPSUM" order="1" />
