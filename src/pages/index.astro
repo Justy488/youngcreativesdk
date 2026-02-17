@@ -12,6 +12,7 @@ import LittleCard from "./components/LittleCard.astro";
 import aacard from "../assets/a-a-card.png";
 import cannescard from "../assets/cannes-card.png";
 import networking from "../assets/networking.png";
+import Overskrift from "../pages/components/Overskrift.astro";
 ---
 
 <html lang="en">
@@ -24,6 +25,9 @@ import networking from "../assets/networking.png";
     <title>Astro</title>
   </head>
   <body>
+    <section>
+      <Overskrift />
+    </section>
     <section class="cards">
       <LittleCard placeholder3={cannescard} title="Ærlig feedback" text="Tag dit portfolio med og få konkret feedback fra kreative, der sidder på bureauer og i kommunikationsafdelinger. Vi prioriterer dialog frem for monolog." />
 
