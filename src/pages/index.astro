@@ -11,6 +11,7 @@ import LittleCard from "../components/LittleCard.astro";
 import aacard from "../assets/a-a-card.png";
 import cannescard from "../assets/cannes-card.png";
 import networking from "../assets/networking.png";
+import Overskrift from "../pages/components/Overskrift.astro";
 ---
 
 <html lang="en">
@@ -24,24 +25,13 @@ import networking from "../assets/networking.png";
   </head>
   <body>
     <Hero />
+    <Overskrift />
     <section class="cards">
-      <LittleCard
-        placeholder3={cannescard}
-        title="Ærlig feedback"
-        text="Tag dit portfolio med og få konkret feedback fra kreative, der sidder på bureauer og i kommunikationsafdelinger. Vi prioriterer dialog frem for monolog."
-      />
+      <LittleCard placeholder3={cannescard} title="Ærlig feedback" text="Tag dit portfolio med og få konkret feedback fra kreative, der sidder på bureauer og i kommunikationsafdelinger. Vi prioriterer dialog frem for monolog." />
 
-      <LittleCard
-        placeholder3={aacard}
-        title="Reel networking"
-        text="Mød Art Directors, kreative strateger, designere og bureaufolk i øjenhøjde. Ingen CV-stak. Ingen akavet smalltalk. Bare ægte samtaler."
-      />
+      <LittleCard placeholder3={aacard} title="Reel networking" text="Mød Art Directors, kreative strateger, designere og bureaufolk i øjenhøjde. Ingen CV-stak. Ingen akavet smalltalk. Bare ægte samtaler." />
 
-      <LittleCard
-        placeholder3={networking}
-        title="Stemning og fællesskab"
-        text="Vores events kombinerer faglighed med uformel stemning, networking, pizza og kolde øl. Det skal være rart at være ny i branchen."
-      />
+      <LittleCard placeholder3={networking} title="Stemning og fællesskab" text="Vores events kombinerer faglighed med uformel stemning, networking, pizza og kolde øl. Det skal være rart at være ny i branchen." />
     </section>
 
     <section>
